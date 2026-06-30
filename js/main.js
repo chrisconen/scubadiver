@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const visibleCount = 3;
     let currentIndex = 0;
     let autoInterval;
+    let cachedGap;
 
     // Create dots
     for (let i = 0; i < totalCards; i++) {
@@ -118,9 +119,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dots = dotsContainer.querySelectorAll('.slider-dot');
 
+    function getCardWidth() {
+      if (cachedGap === undefined) {
+        cachedGap = parseInt(getComputedStyle(track).gap);
+      }
+      return cards[0].offsetWidth + cachedGap;
+    }
+
     function goToSlide(index) {
       currentIndex = index;
-      const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(track).gap);
+      const cardWidth = getCardWidth();
       const offset = -currentIndex * cardWidth;
       track.style.transform = `translateX(${offset}px)`;
 

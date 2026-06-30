@@ -1,0 +1,27 @@
+# GitHub Pages custom headers — long cache, strict security
+
+# Images — 1 year cache
+/images/*
+  Cache-Control: max-age=31536000, public, immutable
+
+# CSS / JS — 1 year
+/*.css
+  Cache-Control: max-age=31536000, public, immutable
+/*.js
+  Cache-Control: max-age=31536000, public, immutable
+/*.webp
+  Cache-Control: max-age=31536000, public, immutable
+
+# Documents (PDF etc) — 1 year
+/*.pdf
+  Cache-Control: max-age=31536000, public, immutable
+/*.txt
+  Cache-Control: max-age=31536000, public, immutable
+/*.xml
+  Cache-Control: max-age=31536000, public, immutable
+
+# HTML — 1 hour (revalidate)
+/*.html
+  Cache-Control: max-age=3600, public, must-revalidate
+/
+  Cache-Control: max-age=3600, public, must-revalidate
