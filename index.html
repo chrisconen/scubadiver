@@ -318,7 +318,7 @@
           </div>
         </div>
 
-        <form class="reveal" action="https://formspree.io/f/meeblpob" method="POST" target="_blank">
+        <form class="reveal contact-form" action="https://formspree.io/f/meeblpob" method="POST">
           <div class="form-group">
             <label for="name">Név</label>
             <input type="text" id="name" name="name" class="form-input" placeholder="Teljes neved" required>
@@ -336,6 +336,10 @@
             <textarea id="message" name="message" class="form-textarea" placeholder="Érdekel a búvárképzés... írj pár szót arról, ami érdekel!" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Üzenet küldése</button>
+          <div class="form-success" style="display:none; text-align:center; padding:var(--space-xl); background:rgba(5,150,105,0.15); border-radius:var(--radius-md); margin-top:var(--space-lg);">
+            <p style="font-size:1.5rem; color:#34D399; font-weight:700; margin-bottom:var(--space-sm);">✓ Elküldve!</p>
+            <p style="color:rgba(255,255,255,0.6);">Köszönöm az üzeneted! Hamarosan válaszolok.</p>
+          </div>
         </form>
       </div>
     </div>

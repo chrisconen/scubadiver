@@ -619,7 +619,7 @@
       </div>
 
       <div class="container-narrow">
-        <form class="reveal" action="https://formspree.io/f/meeblpob" method="POST" target="_blank">
+        <form class="reveal contact-form" action="https://formspree.io/f/meeblpob" method="POST">
           <div class="form-group">
             <label for="tour-name">Név</label>
             <input type="text" id="tour-name" name="name" class="form-input" placeholder="Teljes neved" required>
@@ -650,6 +650,10 @@
             <textarea id="tour-message" name="message" class="form-textarea" placeholder="Bármi, amit tudni szeretnél a túráról..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">🌟 Érdeklődöm e túra iránt</button>
+          <div class="form-success" style="display:none; text-align:center; padding:var(--space-xl); background:rgba(5,150,105,0.15); border-radius:var(--radius-md); margin-top:var(--space-lg);">
+            <p style="font-size:1.5rem; color:#34D399; font-weight:700; margin-bottom:var(--space-sm);">✓ Elküldve!</p>
+            <p style="color:rgba(255,255,255,0.6);">Köszönöm az érdeklődésed! Hamarosan egyeztetjük a részleteket.</p>
+          </div>
         </form>
       </div>
     </div>

@@ -154,6 +154,41 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay();
   }
 
+  /* ─── AJAX form submission (Formspree) ─── */
+  document.querySelectorAll('.contact-form').forEach(form => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const success = form.querySelector('.form-success');
+      const origText = btn.textContent;
+
+      btn.disabled = true;
+      btn.textContent = '⏳ Küldés...';
+
+      try {
+        const resp = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (resp.ok) {
+          form.querySelectorAll('.form-group').forEach(g => g.style.display = 'none');
+          btn.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          alert('Hiba történt a küldés során. Kérlek próbáld újra, vagy írj emailt a chris@scubadiver.hu címre.');
+          btn.disabled = false;
+          btn.textContent = origText;
+        }
+      } catch (err) {
+        alert('Hálózati hiba. Kérlek próbáld újra később.');
+        btn.disabled = false;
+        btn.textContent = origText;
+      }
+    });
+  });
+
   /* ─── Active nav link ─── */
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.navbar-links a');
