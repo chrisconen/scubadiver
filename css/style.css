@@ -1514,7 +1514,7 @@ h3 { font-size: var(--fs-h3); }
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--space-md);
   }
 
@@ -1525,6 +1525,14 @@ h3 { font-size: var(--fs-h3); }
 
   .services-grid-2col {
     grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    background-image: none !important;
+  }
+
+  .service-card > div {
+    width: 100% !important;
   }
 
   .footer-grid {
