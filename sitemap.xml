@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://scubadeiver.hu/</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/"/>
+  </url>
+  <url>
+    <loc>https://scubadeiver.hu/szolgaltatasok</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/szolgaltatasok"/>
+  </url>
+  <url>
+    <loc>https://scubadeiver.hu/tanfolyamok</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/tanfolyamok"/>
+  </url>
+  <url>
+    <loc>https://scubadeiver.hu/kereses-mentes</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/kereses-mentes"/>
+  </url>
+  <url>
+    <loc>https://scubadeiver.hu/rolunk</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/rolunk"/>
+  </url>
+  <url>
+    <loc>https://scubadeiver.hu/buvarturak</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/buvarturak"/>
+  </url>
+</urlset>

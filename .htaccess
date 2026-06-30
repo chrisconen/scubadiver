@@ -1,0 +1,37 @@
+# ScubaDiver.hu - .htaccess
+# Apache config for SEO, compression & caching
+
+# Redirect www to non-www (choose one)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.scubadeiver\.hu [NC]
+RewriteRule ^(.*)$ https://scubadeiver.hu/$1 [L,R=301]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Remove .html extension in URL (SEO friendly URLs)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Compression
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+# Cache static assets (1 year)
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|webp|svg|js|css|woff2?)$">
+  Header set Cache-Control "max-age=31536000, public, immutable"
+</FilesMatch>
+
+# Cache HTML (1 hour)
+<FilesMatch "\.(html|htm)$">
+  Header set Cache-Control "max-age=3600, public, must-revalidate"
+</FilesMatch>
+
+# Security headers
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"

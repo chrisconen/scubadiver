@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Búvártúrák – ScubaDiver.hu | Merülj velünk itthon és a világban</title>
+  <meta name="description" content="Búvártúrák és utak Magyarországon és külföldön. Balaton, Mallorca, Kanári-szigetek, Fülöp-szigetek — részletes programok, árak és időpontok Chris Conen PADI OWSI-vel.">
+  <meta name="keywords" content="búvártúra, búvárút, búvárüdülés, merülőút, balaton merülés, mallorca búvár, kanári-szigetek búvárkodás, fülöp-szigetek búvár, csoportos búvártúra">
+  <link rel="canonical" href="https://scubadeiver.hu/buvarturak">
+  <meta property="og:title" content="Búvártúrák – ScubaDiver.hu">
+  <meta property="og:description" content="Fedezd fel a világ legjobb merülőhelyeit velünk! Részletes programok, árak és időpontok.">
+  <meta property="og:url" content="https://scubadeiver.hu/buvarturak">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="hu_HU">
+  <meta property="og:image" content="https://scubadeiver.hu/images/buvartanfolyam-buvarkodas-balaton-logo.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://scubadeiver.hu/images/buvartanfolyam-buvarkodas-balaton-logo.webp">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤿</text></svg>">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Búvártúrák",
+    "description": "Szervezett búvártúrák Magyarországon és külföldön",
+    "url": "https://scubadeiver.hu/buvarturak",
+    "itemListElement": [
+      { "@type": "Trip", "name": "Balaton – hétvégi merülések", "description": "Hétvégi merülések a Balaton legszebb pontjain" },
+      { "@type": "Trip", "name": "Mallorca – emléktúra", "description": "6 hét a Földközi-tenger gyöngyszemén" },
+      { "@type": "Trip", "name": "Kanári-szigetek búvártúra", "description": "Vulkanikus merülések az Atlanti-óceánban" },
+      { "@type": "Trip", "name": "Fülöp-szigeteki álomtúra", "description": "Trópusi búvárparadicsom" },
+      { "@type": "Trip", "name": "Nitrox hétvége", "description": "Specialty képzés + merülések" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ─── Tour card additional styles ─── */
+    .tour-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: var(--space-2xl);
+    }
+
+    .tour-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-gray-100);
+      transition: all var(--duration-normal) var(--ease-out);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tour-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .tour-card-image {
+      width: 100%;
+      aspect-ratio: 16/10;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tour-card-image-inner {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-slow) var(--ease-out);
+    }
+
+    .tour-card:hover .tour-card-image-inner {
+      transform: scale(1.05);
+    }
+
+    .tour-card-badge {
+      position: absolute;
+      top: var(--space-md);
+      left: var(--space-md);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: var(--radius-full);
+      font-size: var(--fs-tiny);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(8px);
+    }
+
+    .tour-card-badge.available {
+      background: rgba(5, 150, 105, 0.9);
+      color: white;
+    }
+
+    .tour-card-badge.limited {
+      background: rgba(245, 158, 11, 0.9);
+      color: white;
+    }
+
+    .tour-card-badge.soldout {
+      background: rgba(100, 116, 139, 0.9);
+      color: white;
+    }
+
+    .tour-card-body {
+      padding: var(--space-xl);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tour-card-destination {
+      font-size: var(--fs-tiny);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-ocean);
+      margin-bottom: var(--space-xs);
+    }
+
+    .tour-card-title {
+      font-family: var(--font-display);
+      font-size: var(--fs-h2);
+      line-height: var(--lh-tight);
+      color: var(--color-deep);
+      margin-bottom: var(--space-sm);
+    }
+
+    .tour-card-desc {
+      color: var(--color-gray-500);
+      font-size: var(--fs-small);
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--space-lg);
+      flex: 1;
+    }
+
+    .tour-card-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+
+    .tour-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: var(--fs-small);
+      color: var(--color-gray-600);
+    }
+
+    .tour-meta-item strong {
+      font-weight: 600;
+      color: var(--color-gray-800);
+    }
+
+    .tour-card-divider {
+      height: 1px;
+      background: var(--color-gray-100);
+      margin: 0 0 var(--space-lg);
+    }
+
+    .tour-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+
+    .tour-price-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tour-price-label {
+      font-size: var(--fs-tiny);
+      color: var(--color-gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .tour-price {
+      font-family: var(--font-display);
+      font-size: var(--fs-h2);
+      color: var(--color-ocean);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .tour-price small {
+      font-size: 0.6em;
+      color: var(--color-gray-400);
+      font-family: var(--font-body);
+      font-weight: 400;
+    }
+
+    .tour-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+
+    .tour-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--color-mist);
+      border-radius: var(--radius-full);
+      color: var(--color-gray-600);
+      font-weight: 500;
+    }
+
+    /* ─── Featured / Hero tour ─── */
+    .tour-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--color-gray-100);
+      margin-bottom: var(--space-4xl);
+    }
+
+    .tour-featured-image {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      object-fit: cover;
+    }
+
+    .tour-featured-body {
+      padding: var(--space-3xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tour-featured-body .tour-card-destination {
+      font-size: var(--fs-small);
+    }
+
+    .tour-featured-body .tour-card-title {
+      font-size: var(--fs-display-2);
+    }
+
+    .tour-featured-body .tour-card-desc {
+      font-size: var(--fs-body);
+    }
+
+    .tour-featured .tour-price {
+      font-size: var(--fs-display-2);
+    }
+
+    @media (max-width: 768px) {
+      .tour-grid { grid-template-columns: 1fr; }
+      .tour-featured { grid-template-columns: 1fr; }
+      .tour-featured-image { min-height: 240px; }
+      .tour-featured-body { padding: var(--space-xl); }
+      .tour-card-meta { grid-template-columns: 1fr; }
+    }
+
+    /* ─── Filter bar ─── */
+    .filter-bar {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-gray-200);
+      background: var(--color-surface);
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      font-weight: 600;
+      color: var(--color-gray-600);
+      cursor: pointer;
+      transition: all var(--duration-fast) ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--color-ocean);
+      border-color: var(--color-ocean);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Főmenü">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <div class="navbar-logo-icon">
+          <img src="images/buvartanfolyam-buvarkodas-balaton-logo-nav.webp" alt="ScubaDiver.hu logó">
+        </div>
+        <div class="navbar-logo-text">
+          <span class="navbar-logo-title">ScubaDiver</span>
+          <span class="navbar-logo-sub">PADI OWSI · Chris Conen</span>
+        </div>
+      </a>
+      <div class="navbar-links">
+        <a href="index.html">Főoldal</a>
+        <a href="szolgaltatasok.html">Szolgáltatások</a>
+        <a href="tanfolyamok.html">Tanfolyamok</a>
+        <a href="buvarturak.html" class="active">Búvártúrák</a>
+        <a href="kereses-mentes.html">Keresés &amp; mentés</a>
+        <a href="rolunk.html">Rólunk</a>
+      </div>
+      <div class="navbar-cta">
+        <a href="#jelentkezes" class="btn btn-primary btn-sm">Jelentkezem</a>
+      </div>
+      <button class="navbar-toggle" aria-label="Menü nyitás/zárás" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" aria-hidden="true"></div>
+  <a href="#jelentkezes" class="navbar-cta-mobile btn btn-primary btn-sm">Jelentkezem</a>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg, #0B1D3A 0%, #0E2A4A 30%, #0D9488 60%, #0066CC 100%);opacity:0.2;"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <p class="page-hero-breadcrumb"><a href="index.html">Főoldal</a> / Búvártúrák</p>
+      <h1 class="page-hero-title">Búvártúrák</h1>
+      <p class="hero-subtitle" style="max-width:600px;margin:var(--space-lg) auto 0;">Merülj velünk a világ legszebb merülőhelyein — a Balatontól a trópusokig!</p>
+    </div>
+  </section>
+
+  <!-- ===== INTRO + FILTER BAR ===== -->
+  <section class="section" style="padding-bottom:0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Utazz velünk</span>
+        <h2 class="section-title">Válaszd ki a következő búvárkalandod!</h2>
+        <p class="section-subtitle">Kisebb csoportokkal, személyre szabott programmal, professzionális vezetéssel — csak velünk!</p>
+      </div>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">🌍 Minden túra</button>
+        <button class="filter-btn" data-filter="magyar">🇭🇺 Magyarország</button>
+        <button class="filter-btn" data-filter="europa">🌊 Európa</button>
+        <button class="filter-btn" data-filter="tropusi">🏝️ Trópusi</button>
+        <button class="filter-btn" data-filter="specialty">⭐ Specialty</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED TOUR ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="tour-featured reveal" data-category="europa">
+        <div class="tour-featured-image" style="background: linear-gradient(135deg, #0D9488, #0B1D3A); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:6rem; opacity:0.15;">🏝️</span>
+        </div>
+        <div class="tour-featured-body">
+          <span class="tour-card-destination">✨ Kiemelt túra</span>
+          <h3 class="tour-card-title">Mallorca<br><span class="text-gradient">Emléktúra</span></h3>
+          <p class="tour-card-desc">Hat évig oktattam ezen a gyönyörű szigeten, és most visszaviszlek téged is! Egy hetes búvártúra a Földközi-tenger gyöngyszemén — kristálytiszta víz, lenyűgöző sziklalakások, barlangok és gazdag tengeri élővilág vár ránk.</p>
+          <div class="tour-highlights">
+            <span class="tour-highlight">🤿 12 merülés</span>
+            <span class="tour-highlight">🏠 7 éj szállás</span>
+            <span class="tour-highlight">🍽️ Félpanzió</span>
+            <span class="tour-highlight">🚐 Transzfer</span>
+            <span class="tour-highlight">📜 PADI kredit</span>
+          </div>
+          <div class="tour-card-divider"></div>
+          <div class="tour-card-footer">
+            <div class="tour-price-group">
+              <span class="tour-price-label">Ár / fő</span>
+              <span class="tour-price">€1,490 <small>+ repülőjegy</small></span>
+            </div>
+            <a href="#jelentkezes" class="btn btn-primary">Érdekel →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TOUR GRID ===== -->
+      <div class="tour-grid">
+
+        <!-- TOUR 1: Balaton -->
+        <div class="tour-card reveal" data-category="magyar">
+          <div class="tour-card-image">
+            <div class="tour-card-image-inner" style="background: linear-gradient(135deg, #0066CC, #0D9488); display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:4rem; opacity:0.2;">🏞️</span>
+            </div>
+            <span class="tour-card-badge available">✅ Szabad</span>
+          </div>
+          <div class="tour-card-body">
+            <span class="tour-card-destination">🇭🇺 Magyarország</span>
+            <h3 class="tour-card-title">Balaton – hétvégi merülések</h3>
+            <p class="tour-card-desc">Egy hétvége a Balaton vizében! Ismerd meg Magyarország tengerének víz alatti világát. Több merülőhelyet látogatunk meg, minden szintű búvár számára. Akár első merülésed is lehet itt!</p>
+            <div class="tour-highlights">
+              <span class="tour-highlight">🤿 4 merülés</span>
+              <span class="tour-highlight">🏠 2 éj szállás</span>
+              <span class="tour-highlight">🅿️ Parkolás</span>
+            </div>
+            <div class="tour-card-meta">
+              <span class="tour-meta-item">📅 <strong>2026. július 25–27.</strong></span>
+              <span class="tour-meta-item">⏱ <strong>3 nap / 2 éj</strong></span>
+              <span class="tour-meta-item">📊 <strong>Minden szint</strong></span>
+              <span class="tour-meta-item">👥 <strong>Max. 8 fő</strong></span>
+            </div>
+            <div class="tour-card-divider"></div>
+            <div class="tour-card-footer">
+              <div class="tour-price-group">
+                <span class="tour-price-label">Ár / fő</span>
+                <span class="tour-price">89,000 Ft <small>+ felszerelés</small></span>
+              </div>
+              <a href="#jelentkezes" class="btn btn-outline btn-sm">Foglalom →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOUR 2: Kanári-szigetek -->
+        <div class="tour-card reveal" data-category="europa">
+          <div class="tour-card-image">
+            <div class="tour-card-image-inner" style="background: linear-gradient(135deg, #FF6B6B, #F59E0B); display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:4rem; opacity:0.2;">🌋</span>
+            </div>
+            <span class="tour-card-badge limited">⚡ Már csak 4 hely</span>
+          </div>
+          <div class="tour-card-body">
+            <span class="tour-card-destination">🇪🇸 Kanári-szigetek</span>
+            <h3 class="tour-card-title">Atlanti kaland – Fuerteventura</h3>
+            <p class="tour-card-desc">Vulkanikus tengerfenék, kristálytiszta víz, erős áramlatok és delfinek! Az Atlanti-óceán egyik legjobb merülőhelyén kalandozunk. Drift merülések specialistája kalauzol.</p>
+            <div class="tour-highlights">
+              <span class="tour-highlight">🤿 10 merülés</span>
+              <span class="tour-highlight">🏠 7 éj szállás</span>
+              <span class="tour-highlight">🌋 Drift merülés</span>
+              <span class="tour-highlight">🐬 Delfin néző</span>
+            </div>
+            <div class="tour-card-meta">
+              <span class="tour-meta-item">📅 <strong>2026. október 5–12.</strong></span>
+              <span class="tour-meta-item">⏱ <strong>8 nap / 7 éj</strong></span>
+              <span class="tour-meta-item">📊 <strong>Haladó</strong></span>
+              <span class="tour-meta-item">👥 <strong>Max. 6 fő</strong></span>
+            </div>
+            <div class="tour-card-divider"></div>
+            <div class="tour-card-footer">
+              <div class="tour-price-group">
+                <span class="tour-price-label">Ár / fő</span>
+                <span class="tour-price">€1,290 <small>+ repülőjegy</small></span>
+              </div>
+              <a href="#jelentkezes" class="btn btn-outline btn-sm">Foglalom →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOUR 3: Fülöp-szigetek -->
+        <div class="tour-card reveal" data-category="tropusi">
+          <div class="tour-card-image">
+            <div class="tour-card-image-inner" style="background: linear-gradient(135deg, #14B8A6, #0066CC); display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:4rem; opacity:0.2;">🏝️</span>
+            </div>
+            <span class="tour-card-badge available">✅ Szabad</span>
+          </div>
+          <div class="tour-card-body">
+            <span class="tour-card-destination">🇵🇭 Fülöp-szigetek</span>
+            <h3 class="tour-card-title">Álomtúra – Sipaway &amp; környéke</h3>
+            <p class="tour-card-desc">Látogass el velem egykori bázisomra, a Sipaway Divers-re! Trópusi vizek, korallzátonyok, roncsok, színes halak és melegvízi merülés a legjobb formájában. Életre szóló élmény.</p>
+            <div class="tour-highlights">
+              <span class="tour-highlight">🤿 15 merülés</span>
+              <span class="tour-highlight">🏠 10 éj szállás</span>
+              <span class="tour-highlight">🐠 Korallzátony</span>
+              <span class="tour-highlight">🚤 Hajós merülés</span>
+            </div>
+            <div class="tour-card-meta">
+              <span class="tour-meta-item">📅 <strong>2027. február 3–13.</strong></span>
+              <span class="tour-meta-item">⏱ <strong>11 nap / 10 éj</strong></span>
+              <span class="tour-meta-item">📊 <strong>Minden szint</strong></span>
+              <span class="tour-meta-item">👥 <strong>Max. 8 fő</strong></span>
+            </div>
+            <div class="tour-card-divider"></div>
+            <div class="tour-card-footer">
+              <div class="tour-price-group">
+                <span class="tour-price-label">Ár / fő</span>
+                <span class="tour-price">€2,190 <small>+ repülőjegy</small></span>
+              </div>
+              <a href="#jelentkezes" class="btn btn-outline btn-sm">Foglalom →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOUR 4: Nitrox weekend -->
+        <div class="tour-card reveal" data-category="specialty magyar">
+          <div class="tour-card-image">
+            <div class="tour-card-image-inner" style="background: linear-gradient(135deg, #F59E0B, #FBBF24); display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:4rem; opacity:0.2;">💨</span>
+            </div>
+            <span class="tour-card-badge available">✅ Szabad</span>
+          </div>
+          <div class="tour-card-body">
+            <span class="tour-card-destination">⭐ Specialty hétvége</span>
+            <h3 class="tour-card-title">Nitrox + Advanced hétvége</h3>
+            <p class="tour-card-desc">Intenzív hétvége: szerezd meg a PADI Nitrox minősítést, kombinálva Advanced Open Water merülésekkel. Hosszabb merülési idő, rövidebb felszíni szünet — és egyben haladó szintű tudás!</p>
+            <div class="tour-highlights">
+              <span class="tour-highlight">🤿 5 merülés</span>
+              <span class="tour-highlight">📜 2 PADI cert</span>
+              <span class="tour-highlight">🏠 2 éj szállás</span>
+              <span class="tour-highlight">📚 E-learning</span>
+            </div>
+            <div class="tour-card-meta">
+              <span class="tour-meta-item">📅 <strong>2026. augusztus 15–17.</strong></span>
+              <span class="tour-meta-item">⏱ <strong>3 nap / 2 éj</strong></span>
+              <span class="tour-meta-item">📊 <strong>Open Water +</strong></span>
+              <span class="tour-meta-item">👥 <strong>Max. 6 fő</strong></span>
+            </div>
+            <div class="tour-card-divider"></div>
+            <div class="tour-card-footer">
+              <div class="tour-price-group">
+                <span class="tour-price-label">Ár / fő</span>
+                <span class="tour-price">149,000 Ft <small>+ felszerelés</small></span>
+              </div>
+              <a href="#jelentkezes" class="btn btn-outline btn-sm">Foglalom →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOUR 5: Gran Canaria -->
+        <div class="tour-card reveal" data-category="europa">
+          <div class="tour-card-image">
+            <div class="tour-card-image-inner" style="background: linear-gradient(135deg, #8B5CF6, #0D9488); display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:4rem; opacity:0.2;">🌊</span>
+            </div>
+            <span class="tour-card-badge limited">⚡ Már csak 2 hely</span>
+          </div>
+          <div class="tour-card-body">
+            <span class="tour-card-destination">🇪🇸 Kanári-szigetek</span>
+            <h3 class="tour-card-title">Gran Canaria – Dél-Atlanti hét</h3>
+            <p class="tour-card-desc">Visszatérünk a Kanári-szigetek másik gyöngyszemére! Változatos merülőhelyek, roncsok, barlangok és dús tengeri élővilág — egész évben kiváló merülési körülmények.</p>
+            <div class="tour-highlights">
+              <span class="tour-highlight">🤿 10 merülés</span>
+              <span class="tour-highlight">🏠 7 éj szállás</span>
+              <span class="tour-highlight">🚤 Hajós merülés</span>
+              <span class="tour-highlight">🐟 Roncsmerülés</span>
+            </div>
+            <div class="tour-card-meta">
+              <span class="tour-meta-item">📅 <strong>2026. november 9–16.</strong></span>
+              <span class="tour-meta-item">⏱ <strong>8 nap / 7 éj</strong></span>
+              <span class="tour-meta-item">📊 <strong>Haladó</strong></span>
+              <span class="tour-meta-item">👥 <strong>Max. 6 fő</strong></span>
+            </div>
+            <div class="tour-card-divider"></div>
+            <div class="tour-card-footer">
+              <div class="tour-price-group">
+                <span class="tour-price-label">Ár / fő</span>
+                <span class="tour-price">€1,390 <small>+ repülőjegy</small></span>
+              </div>
+              <a href="#jelentkezes" class="btn btn-outline btn-sm">Foglalom →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOUR 6: Cápás merülés -->
+        <div class="tour-card reveal" data-category="specialty tropusi">
+          <div class="tour-card-image">
+            <div class="tour-card-image-inner" style="background: linear-gradient(135deg, #1E3A5F, #0066CC); display:flex; align-items:center; justify-content:center;">
+              <span style="font-size:4rem; opacity:0.2;">🦈</span>
+            </div>
+            <span class="tour-card-badge limited">⚡ Már csak 3 hely</span>
+          </div>
+          <div class="tour-card-body">
+            <span class="tour-card-destination">⭐ Specialty túra</span>
+            <h3 class="tour-card-title">Cápás merülés – Mediterrán élmény</h3>
+            <p class="tour-card-desc">Speciális cápás merülőtúra a Földközi-tengeren. Ismerd meg testközelből a cápa viselkedését, etikus megfigyelés és fotózás. PADI Shark Conservation specialty is elvégezhető.</p>
+            <div class="tour-highlights">
+              <span class="tour-highlight">🤿 6 merülés</span>
+              <span class="tour-highlight">🦈 Cápa fókusz</span>
+              <span class="tour-highlight">📜 PADI cert</span>
+              <span class="tour-highlight">📸 Fotózás</span>
+            </div>
+            <div class="tour-card-meta">
+              <span class="tour-meta-item">📅 <strong>2026. szeptember 14–18.</strong></span>
+              <span class="tour-meta-item">⏱ <strong>5 nap / 4 éj</strong></span>
+              <span class="tour-meta-item">📊 <strong>Haladó</strong></span>
+              <span class="tour-meta-item">👥 <strong>Max. 6 fő</strong></span>
+            </div>
+            <div class="tour-card-divider"></div>
+            <div class="tour-card-footer">
+              <div class="tour-price-group">
+                <span class="tour-price-label">Ár / fő</span>
+                <span class="tour-price">€890 <small>+ repülőjegy</small></span>
+              </div>
+              <a href="#jelentkezes" class="btn btn-outline btn-sm">Foglalom →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING SECTION ===== -->
+  <section class="section section-dark" id="jelentkezes">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label" style="color:var(--color-teal-light);">Jelentkezés</span>
+        <h2 class="section-title" style="color:white;">Érdekel egy túra?</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.5);">Írj, és személyesen egyeztetjük a részleteket!</p>
+      </div>
+
+      <div class="container-narrow">
+        <form class="reveal" action="https://formspree.io/f/yourFormID" method="POST" target="_blank">
+          <div class="form-group">
+            <label for="tour-name">Név</label>
+            <input type="text" id="tour-name" name="name" class="form-input" placeholder="Teljes neved" required>
+          </div>
+          <div class="form-group">
+            <label for="tour-email">Email</label>
+            <input type="email" id="tour-email" name="email" class="form-input" placeholder="email@pelda.hu" required>
+          </div>
+          <div class="form-group">
+            <label for="tour-select">Melyik túra érdekel?</label>
+            <select id="tour-select" name="tour" class="form-input" required>
+              <option value="" disabled selected>Válassz egy túrát...</option>
+              <option value="balaton">Balaton – hétvégi merülések</option>
+              <option value="mallorca">Mallorca – Emléktúra</option>
+              <option value="fuerteventura">Fuerteventura – Atlanti kaland</option>
+              <option value="gran-canaria">Gran Canaria – Dél-Atlanti hét</option>
+              <option value="fulop">Fülöp-szigetek – Álomtúra</option>
+              <option value="nitrox">Nitrox + Advanced hétvége</option>
+              <option value="capa">Cápás merülés – Mediterrán</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tour-people">Hány fő?</label>
+            <input type="number" id="tour-people" name="people" class="form-input" min="1" max="8" placeholder="1" required>
+          </div>
+          <div class="form-group">
+            <label for="tour-message">Üzenet / kérdés</label>
+            <textarea id="tour-message" name="message" class="form-textarea" placeholder="Bármi, amit tudni szeretnél a túráról..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">🌟 Érdeklődöm e túra iránt</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container reveal">
+      <h2 class="display-2">Szeretnéd, ha egyéni túrát szerveznék?</h2>
+      <p>Van egy álom úti célod? Szívesen állítok össze személyre szabott búvártúrát neked és a barátaidnak!</p>
+      <div class="cta-actions">
+        <a href="#jelentkezes" class="btn btn-primary">Egyéni ajánlat</a>
+        <a href="index.html#kapcsolat" class="btn btn-secondary">Általános kapcsolat</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="navbar-logo" style="position:static;">
+            <div class="navbar-logo-icon">
+              <img src="images/buvartanfolyam-buvarkodas-balaton-logo-nav.webp" alt="ScubaDiver.hu logó">
+            </div>
+            <div class="navbar-logo-text">
+              <span class="navbar-logo-title">ScubaDiver</span>
+              <span class="navbar-logo-sub">PADI OWSI · Chris Conen</span>
+            </div>
+          </a>
+          <p>PADI minősített búvároktató nemzetközi tapasztalattal. Búvártanfolyamok, keresés & mentés Balaton, Tisza-tó, Velencei-tó, és specialty merülések Magyarországon és a világ minden pontján.</p>
+        </div>
+        <div>
+          <h4>Oldalak</h4>
+          <div class="footer-links">
+            <a href="index.html">Főoldal</a>
+            <a href="szolgaltatasok.html">Szolgáltatások</a>
+            <a href="tanfolyamok.html">Búvártanfolyamok</a>
+            <a href="buvarturak.html">Búvártúrák</a>
+            <a href="kereses-mentes.html">Keresés &amp; mentés</a>
+            <a href="rolunk.html">Rólunk</a>
+          </div>
+        </div>
+        <div>
+          <h4>Tanfolyamok</h4>
+          <div class="footer-links">
+            <a href="tanfolyamok.html#open-water">Open Water Diver</a>
+            <a href="tanfolyamok.html#advanced">Advanced Open Water</a>
+            <a href="tanfolyamok.html#rescue">Rescue Diver</a>
+            <a href="tanfolyamok.html#nitrox">Nitrox</a>
+          </div>
+        </div>
+        <div>
+          <h4>Kapcsolat</h4>
+          <div class="footer-links">
+            <a href="mailto:chris@scubadiver.hu">chris@scubadiver.hu</a>
+            <a href="index.html#kapcsolat">Üzenet küldése</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ScubaDiver.hu · Chris Conen PADI OWSI - Balaton, Velencei-tó, Tisza-tó keresés & mentés · Minden jog fenntartva</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/buvartanfolyam.buvarkodas.balaton.kereso.buvar" aria-label="Facebook" title="Facebook">f</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* ─── Tour filter ─── */
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const tourCards = document.querySelectorAll('.tour-card');
+      const featured = document.querySelector('.tour-featured');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.dataset.filter;
+
+          // Filter tour cards
+          tourCards.forEach(card => {
+            const cats = card.dataset.category;
+            if (filter === 'all' || cats.includes(filter)) {
+              card.style.display = '';
+              card.style.opacity = '';
+            } else {
+              card.style.opacity = '0';
+              setTimeout(() => card.style.display = 'none', 300);
+            }
+          });
+
+          // Filter featured
+          if (featured) {
+            const fc = featured.dataset.category;
+            if (filter === 'all' || fc.includes(filter)) {
+              featured.style.display = '';
+              featured.style.opacity = '';
+            } else {
+              featured.style.opacity = '0';
+              setTimeout(() => featured.style.display = 'none', 300);
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
