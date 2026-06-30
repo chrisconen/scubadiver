@@ -3,8 +3,8 @@
 
 # Redirect www to non-www (choose one)
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.scubadeiver\.hu [NC]
-RewriteRule ^(.*)$ https://scubadeiver.hu/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.scubadiver\.hu [NC]
+RewriteRule ^(.*)$ https://scubadiver.hu/$1 [L,R=301]
 
 # Force HTTPS
 RewriteCond %{HTTPS} off

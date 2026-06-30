@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 Disallow: /#kapcsolat
-Sitemap: https://scubadeiver.hu/sitemap.xml
+Sitemap: https://scubadiver.hu/sitemap.xml

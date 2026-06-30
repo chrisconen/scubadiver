@@ -2,45 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://scubadeiver.hu/</loc>
+    <loc>https://scubadiver.hu/</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadiver.hu/"/>
   </url>
   <url>
-    <loc>https://scubadeiver.hu/szolgaltatasok</loc>
+    <loc>https://scubadiver.hu/szolgaltatasok</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/szolgaltatasok"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadiver.hu/szolgaltatasok"/>
   </url>
   <url>
-    <loc>https://scubadeiver.hu/tanfolyamok</loc>
+    <loc>https://scubadiver.hu/tanfolyamok</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/tanfolyamok"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadiver.hu/tanfolyamok"/>
   </url>
   <url>
-    <loc>https://scubadeiver.hu/kereses-mentes</loc>
+    <loc>https://scubadiver.hu/kereses-mentes</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/kereses-mentes"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadiver.hu/kereses-mentes"/>
   </url>
   <url>
-    <loc>https://scubadeiver.hu/rolunk</loc>
+    <loc>https://scubadiver.hu/rolunk</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/rolunk"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadiver.hu/rolunk"/>
   </url>
   <url>
-    <loc>https://scubadeiver.hu/buvarturak</loc>
+    <loc>https://scubadiver.hu/buvarturak</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadeiver.hu/buvarturak"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://scubadiver.hu/buvarturak"/>
   </url>
 </urlset>
