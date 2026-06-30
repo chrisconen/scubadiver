@@ -1528,7 +1528,7 @@ h3 { font-size: var(--fs-h3); }
   }
 
   .service-card > div {
-    width: 100% !important;
+    width: 45% !important;
   }
 
   .footer-grid {
