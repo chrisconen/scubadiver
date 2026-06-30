@@ -1527,10 +1527,6 @@ h3 { font-size: var(--fs-h3); }
     grid-template-columns: 1fr;
   }
 
-  .service-card {
-    background-image: none !important;
-  }
-
   .service-card > div {
     width: 100% !important;
   }
