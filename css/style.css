@@ -738,6 +738,10 @@ h3 { font-size: var(--fs-h3); }
   gap: var(--space-xl);
 }
 
+.services-grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .service-card {
   position: relative;
   background: var(--color-surface);
@@ -1497,6 +1501,10 @@ h3 { font-size: var(--fs-h3); }
     font-size: var(--fs-display-2);
   }
 
+  .hero-bg-image {
+    object-position: center right;
+  }
+
   .page-hero-title {
     font-size: var(--fs-display-2);
   }
@@ -1512,6 +1520,10 @@ h3 { font-size: var(--fs-h3); }
 
   .services-grid,
   .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid-2col {
     grid-template-columns: 1fr;
   }
 
