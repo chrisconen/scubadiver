@@ -1501,10 +1501,6 @@ h3 { font-size: var(--fs-h3); }
     font-size: var(--fs-display-2);
   }
 
-  .hero-bg-image {
-    object-position: center right;
-  }
-
   .page-hero-title {
     font-size: var(--fs-display-2);
   }
