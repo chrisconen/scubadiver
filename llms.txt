@@ -1,0 +1,69 @@
+# ScubaDiver.hu — PADI Búvároktató | Chris Conen OWSI
+
+> Chris Conen PADI Open Water Scuba Instructor 2010 óta. Búvártanfolyamok, keresés & mentés, specialty merülések és búvártúrák Magyarországon és a világban. Oktattam Mallorcán (6 év), Kanári-szigeteken (1 év) és a Fülöp-szigeteken (1 év — Sipaway Divers bázismenedzser).
+
+## Adresse
+https://scubadiver.hu
+
+## Rólunk
+Chris Conen PADI OWSI búvároktató 2010 óta. Több mint 10 év nemzetközi tapasztalat a Földközi-tengertől a trópusokig. Jelenleg Magyarországon oktat és végez keresőbúvár szolgáltatást a Balaton, Velencei-tó és Tisza-tó vizein. Specialty oktató: Nitrox, Keresés & mentés, Vízalatti navigáció, Drift Diver, Cápákkal merülés, Vízalatti fotózás, Mélymerülés, Éjszakai merülés.
+
+## Főoldal (/)
+- Hero rész színátmenettel és animált részecskékkel
+- Statisztikák: 10+ év, 3 ország, 500+ képzett búvár, 8 PADI specialty
+- 4 szolgáltatás kártya (Búvártanfolyamok, Búvártúrák, Specialtyk, Keresés & mentés) háttérképekkel
+- PADI Specialty slider (8 kártya, 3 látszik, 6s automata léptetés)
+- Tapasztalat bemutatkozás Chris Conen fotójával
+- Kapcsolat űrlap (AJAX, Formspree)
+
+## Szolgáltatások (/szolgaltatasok.html)
+6 szolgáltatás kártya: PADI búvártanfolyamok, Keresés & mentés, Specialty merülések, Felszerelés tanácsadás, Búvárutak szervezése, Kezdő búvár bemutató (Discover Scuba Diving).
+
+## Búvártanfolyamok (/tanfolyamok.html)
+### PADI kurzusok:
+1. **Open Water Diver** — Kezdő szint, 4-5 nap, max 18m mélység
+2. **Advanced Open Water** — Haladó kezdő, 2-3 nap, 5 specialty merülés, max 30m
+3. **Rescue Diver** — Haladó, 3-4 nap, mentési gyakorlatok, stresszmenedzsment
+4. **Nitrox (EANx)** — Specialty, 1 nap, dúsított levegős merülés
+
+### Specialty kurzusok:
+- Keresés & mentés, Vízalatti navigáció, Drift Diver, Cápákkal merülés
+
+## Búvártúrák (/buvarturak.html)
+### Kiemelt túra:
+- **Mallorca Emléktúra** — 7 nap, 12 merülés, €1.490/fő
+
+### Túrák listája:
+1. **Balaton hétvége** — 3 nap/2 éj, 4 merülés, 89.000 Ft, 2026. júl. 25-27.
+2. **Fuerteventura** — 8 nap/7 éj, 10 merülés, €1.290, 2026. okt. 5-12. (⚡4 hely)
+3. **Fülöp-szigetek Álmotúra** — 11 nap/10 éj, 15 merülés, €2.190, 2027. febr. 3-13.
+4. **Nitrox + Advanced hétvége** — 3 nap/2 éj, 5 merülés, 149.000 Ft, 2026. aug. 15-17.
+5. **Gran Canaria** — 8 nap/7 éj, 10 merülés, €1.390, 2026. nov. 9-16. (⚡2 hely)
+6. **Cápás merülés** — 5 nap/4 éj, 6 merülés, €890, 2026. szept. 14-18. (⚡3 hely)
+
+## Keresés & mentés (/kereses-mentes.html)
+Professzionális keresőbúvár szolgáltatás. Működési terület: Balaton, Velencei-tó, Tisza-tó. Szolgáltatások: eltűnt személyek keresése, tárgyak felkutatása, baleseti helyszínelés, roncsmerülés támogatás, vészhelyzeti riasztás. Technikai felszerelés: víz alatti kommunikáció, speciális világítás, keresési segédeszközök.
+
+## Rólunk (/rolunk.html)
+### Chris Conen idővonal:
+- **2010** — PADI OWSI minősítés
+- **2011–2017** — Mallorca, Spanyolország (6 év)
+- **2018–2019** — Kanári-szigetek: Fuerteventura & Gran Canaria (1 év)
+- **2020** — Fülöp-szigetek, Sipaway Divers bázismenedzser (1 év)
+- **2021–napjaink** — Magyarország, ScubaDiver.hu
+
+### PADI Specialty-k:
+Nitrox (EANx), Keresés & mentés, Vízalatti navigáció, Drift Diver, Cápákkal merülés, Vízalatti fotózás, Mélymerülés, Éjszakai merülés
+
+## Technikai adatok
+- Tiszta HTML + CSS + JavaScript (nincs framework)
+- Reszponzív design (Bebas Neue + Plus Jakarta Sans betűtípusok)
+- JSON-LD struktúrált adat (LocalBusiness, Person, Service, Course, Trip)
+- Formspree AJAX űrlapok (nem navigál el az oldalról)
+- GitHub Pages hosztolás
+- Domain: scubadiver.hu
+
+## Kapcsolat
+- E-Mail: chris@scubadiver.hu
+- Facebook: https://www.facebook.com/buvartanfolyam.buvarkodas.balaton.kereso.buvar
+- Űrlap: https://scubadiver.hu/#kapcsolat

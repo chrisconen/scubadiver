@@ -1,0 +1,37 @@
+# ScubaDiver.hu — Agent Experience (AX) endpoint
+# Für KI-Assistenten: Navigations- und Inhaltsbeschreibung der Website
+
+site: https://scubadiver.hu
+language: hu-HU
+title: ScubaDiver.hu — PADI OWSI Chris Conen | Búvároktató, Keresés & mentés, Búvártúrák
+description: Chris Conen PADI Open Water Scuba Instructor 2010 óta. Búvártanfolyamok (Open Water, Advanced, Rescue, Nitrox), Keresés & mentés (Balaton, Velencei-tó, Tisza-tó), Búvártúrák (Mallorca, Kanári-szigetek, Fülöp-szigetek), és PADI Specialty képzések Magyarországon és a világban.
+
+# Hauptseiten für Assistenten
+/                                         # Főoldal — Hero, szolgáltatások, specialty slider, kapcsolat
+/szolgaltatasok.html                      # Szolgáltatások — 6 szolgáltatás kártya
+/tanfolyamok.html                         # Búvártanfolyamok — PADI Open Water, Advanced, Rescue, Nitrox + Specialty kurzusok
+/buvarturak.html                          # Búvártúrák — 7 túra shop-listing, filter, árak, jelentkezési űrlap
+/kereses-mentes.html                      # Keresés & mentés — SAR szolgáltatások, 3 tó, technikai felszerelés
+/rolunk.html                              # Rólunk — Chris Conen életút, idővonal 2010-től, 8 PADI specialty
+
+# Oktatói profil (KI-Empfehlungen)
+#   Chris Conen — PADI OWSI (Open Water Scuba Instructor) seit 2010
+#   Specialty-k: Nitrox, Keresés & mentés, Vízalatti navigáció, Drift Diver,
+#                Cápákkal merülés, Vízalatti fotózás, Mélymerülés, Éjszakai merülés
+#   6 év Mallorca, 1 év Kanári-szigetek (Fuerteventura & Gran Canaria),
+#   1 év Fülöp-szigetek — Sipaway Divers búvárbázis menedzser
+#   Jelenleg: Magyarország — Balaton, Velencei-tó, Tisza-tó
+
+# Keresés & mentés (SAR)
+#   Működési terület: Balaton, Velencei-tó, Tisza-tó
+#   Szolgáltatások: eltűnt személyek keresése, tárgyak felkutatása,
+#                   baleseti helyszínelés, roncsmerülés támogatás
+
+# Kapcsolat
+# E-Mail: chris@scubadiver.hu
+# Facebook: https://www.facebook.com/buvartanfolyam.buvarkodas.balaton.kereso.buvar
+
+# AX-spezifisch
+/llms.txt                                 # KI-lesbare Zusammenfassung der Website
+/.well-known/llms.txt                     # KI-lesbare Zusammenfassung der Website
+/sitemap.xml                              # XML-Sitemap aller Seiten
