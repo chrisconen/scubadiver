@@ -731,6 +731,49 @@ h3 { font-size: var(--fs-h3); }
   color: var(--color-teal-light);
 }
 
+/* ─── Hero diver overhang (SAR page) ─── */
+.page-hero-sar {
+  overflow: visible;
+  padding-bottom: calc(var(--space-4xl) + 60px);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-diver {
+  position: absolute;
+  bottom: -40px;
+  left: 20%;
+  z-index: 10;
+  height: 280px;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 8px 30px rgba(0,0,0,0.4));
+}
+
+@media (max-width: 768px) {
+  .hero-diver {
+    height: 180px;
+    bottom: -30px;
+    left: 15%;
+  }
+  .page-hero-sar {
+    padding-bottom: calc(var(--space-4xl) + 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-diver {
+    height: 130px;
+    bottom: -20px;
+    left: 10%;
+  }
+  .page-hero-sar {
+    padding-bottom: calc(var(--space-4xl) + 30px);
+  }
+}
+
 /* ─── Service Cards ─── */
 .services-grid {
   display: grid;
