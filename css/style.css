@@ -1421,6 +1421,28 @@ h3 { font-size: var(--fs-h3); }
   font-size: var(--fs-small);
 }
 
+/* ─── Video + Text split ─── */
+.video-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.video-content-text p {
+  color: var(--color-gray-600);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-lg);
+  font-size: var(--fs-body);
+}
+
+@media (max-width: 768px) {
+  .video-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
 /* ─── Page Banner (section highlight) ─── */
 .banner-highlight {
   background: linear-gradient(135deg, var(--color-sky), var(--color-mist));
