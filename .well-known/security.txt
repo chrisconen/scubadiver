@@ -1,0 +1,4 @@
+Contact: mailto:chris@scubadiver.hu
+Expires: 2027-07-01T00:00:00.000Z
+Preferred-Languages: hu, en
+Canonical: https://scubadiver.hu/.well-known/security.txt

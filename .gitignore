@@ -9,3 +9,6 @@ Thumbs.db
 
 # Project
 .opencode/
+
+# Videó projektfájlok (Filmora)
+*.wfp

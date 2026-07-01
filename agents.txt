@@ -8,11 +8,11 @@ description: Chris Conen PADI Open Water Scuba Instructor 2010 óta. Búvártanf
 
 # Hauptseiten für Assistenten
 /                                         # Főoldal — Hero, szolgáltatások, specialty slider, kapcsolat
-/szolgaltatasok.html                      # Szolgáltatások — 6 szolgáltatás kártya
-/tanfolyamok.html                         # Búvártanfolyamok — PADI Open Water, Advanced, Rescue, Nitrox + Specialty kurzusok
-/buvarturak.html                          # Búvártúrák — 7 túra shop-listing, filter, árak, jelentkezési űrlap
-/kereses-mentes.html                      # Keresés & mentés — SAR szolgáltatások, 3 tó, technikai felszerelés
-/rolunk.html                              # Rólunk — Chris Conen életút, idővonal 2010-től, 8 PADI specialty
+/szolgaltatasok                           # Szolgáltatások — 6 szolgáltatás kártya
+/tanfolyamok                              # Búvártanfolyamok — PADI Open Water, Advanced, Rescue, Nitrox + Specialty kurzusok
+/buvarturak                               # Búvártúrák — 7 túra shop-listing, filter, árak, jelentkezési űrlap
+/kereses-mentes                           # Keresés & mentés — SAR szolgáltatások, 3 tó, technikai felszerelés
+/rolunk                                   # Rólunk — Chris Conen életút, idővonal 2010-től, 8 PADI specialty
 
 # Oktatói profil (KI-Empfehlungen)
 #   Chris Conen — PADI OWSI (Open Water Scuba Instructor) seit 2010
@@ -30,6 +30,7 @@ description: Chris Conen PADI Open Water Scuba Instructor 2010 óta. Búvártanf
 # Kapcsolat
 # E-Mail: chris@scubadiver.hu
 # Facebook: https://www.facebook.com/buvartanfolyam.buvarkodas.balaton.kereso.buvar
+# YouTube: https://www.youtube.com/@buvartanfolyamok-kereses-buvar
 
 # AX-spezifisch
 /llms.txt                                 # KI-lesbare Zusammenfassung der Website

@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0B1D3A">
   <title>Búvártanfolyamok – ScubaDiver.hu | PADI Kurzusok</title>
   <meta name="description" content="PADI búvártanfolyamok Magyarországon: Open Water Diver, Advanced Open Water, Rescue Diver, Nitrox és Specialty kurzusok Chris Conen PADI OWSI oktatóval.">
   <meta name="keywords" content="PADI tanfolyam, open water diver, advanced open water, rescue diver, nitrox, búvártanfolyam, búvárképzés, magyarország">
@@ -11,13 +14,21 @@
   <meta property="og:description" content="Teljes PADI kurzus kínálat Open Water-tól Rescue Diver-ig. Nemzetközi minősítés magyar nyelven.">
   <meta property="og:url" content="https://scubadiver.hu/tanfolyamok">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ScubaDiver.hu">
   <meta property="og:locale" content="hu_HU">
-  <meta property="og:image" content="https://scubadiver.hu/images/buvartanfolyam-buvarkodas-fb-share.png">
+  <meta property="og:image" content="https://scubadiver.hu/images/buvartanfolyam-buvarkodas-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Búvártanfolyamok – ScubaDiver.hu | PADI Kurzusok">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://scubadiver.hu/images/buvartanfolyam-buvarkodas-fb-share.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+  <meta name="twitter:title" content="Búvártanfolyamok – ScubaDiver.hu | PADI Kurzusok">
+  <meta name="twitter:description" content="Teljes PADI kurzus kínálat Open Water-tól Rescue Diver-ig. Nemzetközi minősítés magyar nyelven.">
+  <meta name="twitter:image" content="https://scubadiver.hu/images/buvartanfolyam-buvarkodas-og.jpg">
+  <link rel="preload" href="fonts/pjs-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/pjs-variable-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bebas-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bebas-400-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤿</text></svg>">
 
@@ -36,8 +47,55 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://scubadiver.hu/" },
+      { "@type": "ListItem", "position": 2, "name": "Búvártanfolyamok", "item": "https://scubadiver.hu/tanfolyamok" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kell-e előképzettség a búvártanfolyamhoz?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nem. A PADI Open Water Diver tanfolyamhoz nem kell semmilyen búvár-előképzettség — elegendő az alapszintű úszástudás és egy egészségügyi nyilatkozat kitöltése. Minden mást lépésről lépésre megtanulunk." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hány éves kortól lehet búvárkodni?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A PADI Open Water Diver tanfolyam 10 éves kortól végezhető el (10–14 év között Junior Open Water Diver minősítéssel), felső korhatár pedig nincs — jó egészségi állapot esetén bármikor elkezdhető." }
+      },
+      {
+        "@type": "Question",
+        "name": "Meddig érvényes a PADI minősítés?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A PADI minősítés egy életre szól, nem jár le. Ha hosszabb ideig nem merültél, egy rövid ismétlő (ReActivate) programmal frissítheted a tudásodat." }
+      },
+      {
+        "@type": "Question",
+        "name": "Milyen felszerelésre van szükségem a tanfolyamon?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Kezdésnek az alapfelszerelés (maszk, légzőcső, uszony) is elegendő. A további felszerelések beszerzéséről és bérlési lehetőségeiről a jelentkezéskor egyeztetünk — szívesen segítek a kiválasztásban is." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hol zajlik az oktatás és mennyibe kerül?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Az elméleti oktatás online (PADI eLearning) vagy személyesen történik, a gyakorlat védett vízben és hazai nyíltvízen (pl. Balaton) zajlik, de külföldi helyszín is megoldható. Az árak a létszámtól és a helyszíntől függenek — kérj személyre szabott ajánlatot!" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <a class="skip-link" href="#tartalom">Ugrás a tartalomhoz</a>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" role="navigation" aria-label="Főmenü">
@@ -52,15 +110,15 @@
         </div>
       </a>
       <div class="navbar-links">
-        <a href="index.html">Főoldal</a>
-        <a href="szolgaltatasok.html">Szolgáltatások</a>
-        <a href="tanfolyamok.html" class="active">Tanfolyamok</a>
-        <a href="buvarturak.html">Búvártúrák</a>
-        <a href="kereses-mentes.html">Keresés &amp; mentés</a>
-        <a href="rolunk.html">Rólunk</a>
+        <a href="/">Főoldal</a>
+        <a href="/szolgaltatasok">Szolgáltatások</a>
+        <a href="/tanfolyamok" class="active">Tanfolyamok</a>
+        <a href="/buvarturak">Búvártúrák</a>
+        <a href="/kereses-mentes">Keresés &amp; mentés</a>
+        <a href="/rolunk">Rólunk</a>
       </div>
       <div class="navbar-cta">
-        <a href="index.html#kapcsolat" class="btn btn-primary btn-sm">Kapcsolat</a>
+        <a href="/#kapcsolat" class="btn btn-primary btn-sm">Kapcsolat</a>
       </div>
       <button class="navbar-toggle" aria-label="Menü nyitás/zárás" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -68,14 +126,16 @@
     </div>
   </nav>
   <div class="nav-overlay" aria-hidden="true"></div>
-  <a href="index.html#kapcsolat" class="navbar-cta-mobile btn btn-primary btn-sm">Kapcsolat</a>
+  <a href="/#kapcsolat" class="navbar-cta-mobile btn btn-primary btn-sm">Kapcsolat</a>
+
+  <main id="tartalom">
 
   <!-- ===== PAGE HERO ===== -->
   <section class="page-hero">
     <div style="position:absolute;inset:0;background:linear-gradient(135deg, #0B1D3A 0%, #0E2A4A 40%, #0066CC 100%);opacity:0.25;"></div>
     <div class="page-hero-overlay"></div>
     <div class="container page-hero-content">
-      <p class="page-hero-breadcrumb"><a href="index.html">Főoldal</a> / Búvártanfolyamok</p>
+      <p class="page-hero-breadcrumb"><a href="/">Főoldal</a> / Búvártanfolyamok</p>
       <h1 class="page-hero-title">Búvártanfolyamok</h1>
     </div>
   </section>
@@ -201,17 +261,52 @@
     </div>
   </section>
 
+  <!-- ===== GYIK ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">GYIK</span>
+        <h2 class="section-title">Gyakori kérdések</h2>
+        <p class="section-subtitle">Amit a legtöbben kérdeznek a búvártanfolyamokról</p>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>Kell-e előképzettség a búvártanfolyamhoz?</summary>
+          <p>Nem. A PADI Open Water Diver tanfolyamhoz nem kell semmilyen búvár-előképzettség — elegendő az alapszintű úszástudás és egy egészségügyi nyilatkozat kitöltése. Minden mást lépésről lépésre megtanulunk.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hány éves kortól lehet búvárkodni?</summary>
+          <p>A PADI Open Water Diver tanfolyam 10 éves kortól végezhető el (10–14 év között Junior Open Water Diver minősítéssel), felső korhatár pedig nincs — jó egészségi állapot esetén bármikor elkezdhető.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Meddig érvényes a PADI minősítés?</summary>
+          <p>A PADI minősítés egy életre szól, nem jár le. Ha hosszabb ideig nem merültél, egy rövid ismétlő (ReActivate) programmal frissítheted a tudásodat.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Milyen felszerelésre van szükségem a tanfolyamon?</summary>
+          <p>Kezdésnek az alapfelszerelés (maszk, légzőcső, uszony) is elegendő. A további felszerelések beszerzéséről és bérlési lehetőségeiről a jelentkezéskor egyeztetünk — szívesen segítek a kiválasztásban is.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hol zajlik az oktatás és mennyibe kerül?</summary>
+          <p>Az elméleti oktatás online (PADI eLearning) vagy személyesen történik, a gyakorlat védett vízben és hazai nyíltvízen (pl. Balaton) zajlik, de külföldi helyszín is megoldható. Az árak a létszámtól és a helyszíntől függenek — <a href="/#kapcsolat">kérj személyre szabott ajánlatot</a>!</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CTA ===== -->
   <section class="cta-section">
     <div class="container reveal">
       <h2 class="display-2">Melyik tanfolyam érdekel?</h2>
       <p>Vedd fel velem a kapcsolatot, és segítek kiválasztani a számodra legjobb kurzust!</p>
       <div class="cta-actions">
-        <a href="index.html#kapcsolat" class="btn btn-primary">Érdeklődöm</a>
-        <a href="rolunk.html" class="btn btn-secondary">Rólam</a>
+        <a href="/#kapcsolat" class="btn btn-primary">Érdeklődöm</a>
+        <a href="/rolunk" class="btn btn-secondary">Rólam</a>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
@@ -232,36 +327,36 @@
         <div>
           <h4>Oldalak</h4>
           <div class="footer-links">
-            <a href="index.html">Főoldal</a>
-            <a href="szolgaltatasok.html">Szolgáltatások</a>
-            <a href="tanfolyamok.html">Búvártanfolyamok</a>
-            <a href="buvarturak.html">Búvártúrák</a>
-            <a href="kereses-mentes.html">Keresés &amp; mentés</a>
-            <a href="rolunk.html">Rólunk</a>
+            <a href="/">Főoldal</a>
+            <a href="/szolgaltatasok">Szolgáltatások</a>
+            <a href="/tanfolyamok">Búvártanfolyamok</a>
+            <a href="/buvarturak">Búvártúrák</a>
+            <a href="/kereses-mentes">Keresés &amp; mentés</a>
+            <a href="/rolunk">Rólunk</a>
           </div>
         </div>
         <div>
           <h4>Tanfolyamok</h4>
           <div class="footer-links">
-            <a href="tanfolyamok.html#open-water">Open Water Diver</a>
-            <a href="tanfolyamok.html#advanced">Advanced Open Water</a>
-            <a href="tanfolyamok.html#rescue">Rescue Diver</a>
-            <a href="tanfolyamok.html#nitrox">Nitrox</a>
+            <a href="/tanfolyamok#open-water">Open Water Diver</a>
+            <a href="/tanfolyamok#advanced">Advanced Open Water</a>
+            <a href="/tanfolyamok#rescue">Rescue Diver</a>
+            <a href="/tanfolyamok#nitrox">Nitrox</a>
           </div>
         </div>
         <div>
           <h4>Kapcsolat</h4>
           <div class="footer-links">
             <a href="mailto:chris@scubadiver.hu">chris@scubadiver.hu</a>
-            <a href="index.html#kapcsolat">Üzenet küldése</a>
+            <a href="/#kapcsolat">Üzenet küldése</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 ScubaDiver.hu · Chris Conen PADI OWSI - Balaton, Velencei-tó, Tisza-tó keresés & mentés · Minden jog fenntartva</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/buvartanfolyam.buvarkodas.balaton.kereso.buvar" aria-label="Facebook" title="Facebook">f</a>
-          <a href="https://www.youtube.com/@buvartanfolyamok-kereses-buvar" aria-label="YouTube" title="YouTube">?</a>
+          <a href="https://www.facebook.com/buvartanfolyam.buvarkodas.balaton.kereso.buvar" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg width="16" height="16" viewBox="0 0 320 512" fill="currentColor" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+          <a href="https://www.youtube.com/@buvartanfolyamok-kereses-buvar" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><svg width="20" height="20" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
         </div>
       </div>
     </div>

@@ -1742,3 +1742,110 @@ h3 { font-size: var(--fs-h3); }
     flex: 0 0 85%;
   }
 }
+
+
+/* ============================================================
+   KIEGÉSZÍTÉSEK — akadálymentesség, GYIK, csökkentett mozgás
+   ============================================================ */
+
+/* ─── Skip link (billentyűzetes navigáció) ─── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 2000;
+  background: var(--color-deep);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ─── Látható fókusz ─── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--color-ocean);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── GYIK ─── */
+.faq-list {
+  max-width: 760px;
+  margin: var(--space-2xl) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: var(--space-lg) var(--space-xl);
+  font-weight: 700;
+  color: var(--color-deep);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--color-ocean);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  padding: 0 var(--space-xl) var(--space-lg);
+  color: var(--color-gray-600);
+  line-height: var(--lh-relaxed);
+}
+
+/* ─── Csökkentett mozgás ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-particle {
+    display: none;
+  }
+}

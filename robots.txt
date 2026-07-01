@@ -1,5 +1,4 @@
 # ScubaDiver.hu - Robots
 User-agent: *
 Allow: /
-Disallow: /#kapcsolat
 Sitemap: https://scubadiver.hu/sitemap.xml

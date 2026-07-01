@@ -198,11 +198,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ─── Active nav link ─── */
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = (window.location.pathname.split('/').pop() || 'index').replace('.html', '');
   const navLinks = document.querySelectorAll('.navbar-links a');
   navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    const href = (link.getAttribute('href') || '').split('#')[0].replace(/^\//, '').replace('.html', '') || 'index';
+    if (href === currentPath) {
       link.classList.add('active');
     }
   });
